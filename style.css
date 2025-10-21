@@ -20,6 +20,12 @@ body {
 /* ==== GLOBAL OUTLINE STYLES ==== */
 h1, h2, h3, h4, h5, h6, a, .logo, .menu-icon {
   color: white;
+  text-shadow:
+    -2px -2px 0 #000,
+     2px -2px 0 #000,
+    -2px  2px 0 #000,
+     2px  2px 0 #000;
+}
 
 /* Blue text stays clean (no outline) */
 p, li {
