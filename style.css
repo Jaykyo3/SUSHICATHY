@@ -977,3 +977,463 @@ ul li {
     margin-right: 5px;
     font-weight: bold;
 }
+
+/* === BUSINESS OBJECTIVES === */
+.business-objectives {
+    padding: 2rem;
+}
+
+.objectives-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.objective-card {
+    background: rgba(255, 255, 255, 0.95);
+    border: 4px solid black;
+    border-radius: 6px;
+    box-shadow: 0 0 0 6px #045b73 inset;
+}
+
+.objective-card .inner-box {
+    background: white;
+    border: 3px solid black;
+    border-radius: 4px;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.objective-card h3 {
+    color: #045b73;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.objective-card p {
+    color: #04364A;
+    font-size: 0.8rem;
+    line-height: 1.5;
+}
+
+/* === PESTLE ANALYSIS === */
+.pestle-section {
+    padding: 2rem;
+}
+
+.pestle-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.pestle-card {
+    background: rgba(255, 255, 255, 0.95);
+    border: 4px solid black;
+    border-radius: 6px;
+    box-shadow: 0 0 0 6px #045b73 inset;
+}
+
+.pestle-card .inner-box {
+    background: white;
+    border: 3px solid black;
+    border-radius: 4px;
+    padding: 1.5rem;
+    text-align: center;
+    height: 100%;
+}
+
+.pestle-card h3 {
+    color: #045b73;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.pestle-card p {
+    color: #04364A;
+    font-size: 0.75rem;
+    line-height: 1.5;
+}
+
+/* === FINANCIAL SECTION === */
+.finance-section {
+    padding: 2rem;
+}
+
+.finance-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.finance-card {
+    background: rgba(255, 255, 255, 0.95);
+    border: 4px solid black;
+    border-radius: 6px;
+    box-shadow: 0 0 0 6px #045b73 inset;
+}
+
+.finance-card .inner-box {
+    background: white;
+    border: 3px solid black;
+    border-radius: 4px;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.finance-card h3 {
+    color: #045b73;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.finance-card .amount {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #00aaff;
+    margin-bottom: 0.5rem;
+}
+
+.finance-card p {
+    color: #04364A;
+    font-size: 0.75rem;
+}
+
+/* === PRICING TABLE === */
+.pricing-table {
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.95);
+    border: 4px solid black;
+    border-radius: 6px;
+    box-shadow: 0 0 0 6px #045b73 inset;
+}
+
+.pricing-table .inner-box {
+    background: white;
+    border: 3px solid black;
+    border-radius: 4px;
+    padding: 1.5rem;
+}
+
+.pricing-table h3 {
+    color: #045b73;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.pricing-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.7rem;
+}
+
+.pricing-table th {
+    background: #045b73;
+    color: white;
+    padding: 0.8rem;
+    border: 2px solid black;
+    text-shadow: none;
+}
+
+.pricing-table td {
+    padding: 0.6rem;
+    border: 2px solid black;
+    text-align: center;
+    background: white;
+}
+
+.pricing-table tr:nth-child(even) {
+    background: #f0f8ff;
+}
+
+/* === RESPONSIVE DESIGN === */
+@media (max-width: 768px) {
+    .objectives-grid,
+    .pestle-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .finance-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .pricing-table {
+        width: 95%;
+        overflow-x: auto;
+    }
+    
+    .pricing-table table {
+        font-size: 0.6rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .finance-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* === BUSINESS PLAN PAGE === */
+.business-hero {
+  height: 70vh;
+  background: url('assets/sushihero.png') center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 0 0 4px black;
+}
+
+.business-hero img.logo {
+  width: 40%;
+  image-rendering: pixelated;
+  max-width: 500px;
+}
+
+.business-hero h2 {
+  color: white;
+  font-size: 1rem;
+  margin-top: 1rem;
+  text-shadow:
+    -2px -2px 0 #000,
+     2px -2px 0 #000,
+    -2px  2px 0 #000,
+     2px  2px 0 #000;
+}
+
+/* Business Sections */
+.business-section {
+  padding: 2rem;
+}
+
+.business-card {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.95);
+  border: 4px solid black;
+  border-radius: 6px;
+  box-shadow: 0 0 0 6px #045b73 inset;
+}
+
+.business-card .inner-box {
+  background: white;
+  border: 3px solid black;
+  border-radius: 4px;
+  padding: 2rem;
+}
+
+.business-card h3 {
+  color: #045b73;
+  margin: 1.5rem 0 1rem 0;
+  font-size: 1rem;
+}
+
+.business-card h3:first-child {
+  margin-top: 0;
+}
+
+.business-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.business-card li {
+  padding: 0.5rem 0;
+  position: relative;
+  padding-left: 1.5rem;
+  font-size: 0.8rem;
+  color: #04364A;
+}
+
+.business-card li:before {
+  content: "🍣";
+  position: absolute;
+  left: 0;
+}
+
+/* Analysis Grid */
+.analysis-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem auto;
+  max-width: 1200px;
+}
+
+.analysis-card {
+  background: rgba(255, 255, 255, 0.95);
+  border: 4px solid black;
+  border-radius: 6px;
+  box-shadow: 0 0 0 6px #045b73 inset;
+}
+
+.analysis-card .inner-box {
+  background: white;
+  border: 3px solid black;
+  border-radius: 4px;
+  padding: 1.5rem;
+  height: 100%;
+  text-align: center;
+}
+
+.analysis-card h3 {
+  color: #045b73;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.analysis-card p {
+  color: #04364A;
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+/* Operations Grid */
+.operations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem auto;
+  max-width: 1200px;
+}
+
+.operation-card {
+  background: rgba(255, 255, 255, 0.95);
+  border: 4px solid black;
+  border-radius: 6px;
+  box-shadow: 0 0 0 6px #045b73 inset;
+}
+
+.operation-card .inner-box {
+  background: white;
+  border: 3px solid black;
+  border-radius: 4px;
+  padding: 1.5rem;
+  text-align: center;
+  height: 100%;
+}
+
+.operation-card h3 {
+  color: #045b73;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.operation-card p {
+  color: #04364A;
+  font-size: 0.75rem;
+  line-height: 1.5;
+}
+
+/* SWOT Analysis */
+.swot-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem auto;
+  max-width: 1200px;
+}
+
+.swot-card {
+  background: rgba(255, 255, 255, 0.95);
+  border: 4px solid black;
+  border-radius: 6px;
+}
+
+.swot-card .inner-box {
+  background: white;
+  border: 3px solid black;
+  border-radius: 4px;
+  padding: 1.5rem;
+  height: 100%;
+}
+
+.swot-card h3 {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.swot-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.swot-card li {
+  padding: 0.4rem 0;
+  position: relative;
+  padding-left: 1.5rem;
+  font-size: 0.75rem;
+  color: #04364A;
+}
+
+.swot-card li:before {
+  position: absolute;
+  left: 0;
+}
+
+.strengths {
+  box-shadow: 0 0 0 6px #4CAF50 inset;
+}
+
+.strengths h3 { color: #4CAF50; }
+.strengths li:before { content: "✅"; }
+
+.weaknesses {
+  box-shadow: 0 0 0 6px #FF9800 inset;
+}
+
+.weaknesses h3 { color: #FF9800; }
+.weaknesses li:before { content: "⚠️"; }
+
+.opportunities {
+  box-shadow: 0 0 0 6px #2196F3 inset;
+}
+
+.opportunities h3 { color: #2196F3; }
+.opportunities li:before { content: "🚀"; }
+
+.threats {
+  box-shadow: 0 0 0 6px #F44336 inset;
+}
+
+.threats h3 { color: #F44336; }
+.threats li:before { content: "🌪️"; }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .analysis-grid,
+  .operations-grid,
+  .swot-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .business-section {
+    padding: 1rem;
+  }
+  
+  .business-card {
+    width: 95%;
+  }
+}
+
+@media (max-width: 480px) {
+  .business-card .inner-box {
+    padding: 1rem;
+  }
+  
+  .analysis-card .inner-box,
+  .operation-card .inner-box,
+  .swot-card .inner-box {
+    padding: 1rem;
+  }
+}
