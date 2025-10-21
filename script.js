@@ -14,7 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
       navMenu.classList.toggle("active");
     });
 
-    // Close menu when clicking outside or pressing Esc
     document.addEventListener("click", (e) => {
       if (
         !navMenu.contains(e.target) &&
@@ -62,7 +61,6 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(hideLoader, 900);
   }
 
-  // Show loader on internal link clicks
   document.addEventListener("click", (e) => {
     const anchor = e.target.closest("a");
     if (!anchor) return;
@@ -88,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
     orderBtns.forEach((btn) => {
       btn.addEventListener("click", () => {
         popup.style.display = "flex";
-        document.body.style.overflow = "hidden"; // prevent scroll
+        document.body.style.overflow = "hidden";
       });
     });
 
@@ -99,12 +97,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     closePopup.addEventListener("click", closePopupFunc);
 
-    // Hide when clicking outside popup content
     popup.addEventListener("click", (e) => {
       if (e.target === popup) closePopupFunc();
     });
 
-    // Hide on Esc key
     document.addEventListener("keydown", (e) => {
       if (e.key === "Escape" && popup.style.display === "flex") {
         closePopupFunc();
@@ -153,85 +149,72 @@ window.addEventListener("load", () => {
   if (loader) loader.classList.add("hidden");
 });
 
-// Background music autoplay
+/* === BACKGROUND MUSIC === */
 document.addEventListener('DOMContentLoaded', function() {
-    const backgroundMusic = document.getElementById('backgroundMusic');
-    const musicToggle = document.getElementById('musicToggle');
-    const musicMute = document.getElementById('musicMute');
-    
-    // Set volume to a reasonable level (0.0 to 1.0)
-    backgroundMusic.volume = 0.3;
-    
-    // Try to autoplay the music
-    function playBackgroundMusic() {
-        const playPromise = backgroundMusic.play();
-        
-        if (playPromise !== undefined) {
-            playPromise.then(() => {
-                // Audio started successfully
-                console.log('Background music started');
-                hideMusicControls();
-            }).catch(error => {
-                // Auto-play was prevented - show play button instead
-                console.log('Autoplay prevented, waiting for user interaction');
-                showMusicControls();
-            });
-        }
+  const backgroundMusic = document.getElementById('backgroundMusic');
+  const musicToggle = document.getElementById('musicToggle');
+  const musicMute = document.getElementById('musicMute');
+
+  backgroundMusic.volume = 0.3;
+
+  function playBackgroundMusic() {
+    const playPromise = backgroundMusic.play();
+    if (playPromise !== undefined) {
+      playPromise.then(() => {
+        console.log('Background music started');
+      }).catch(error => {
+        console.log('Autoplay prevented, waiting for user interaction');
+        showMusicControls();
+      });
     }
-    
-    function showMusicControls() {
-        const controls = document.querySelector('.music-controls');
-        controls.style.display = 'block';
-        
-        // Add click event to start music
-        document.body.addEventListener('click', function startMusicOnClick() {
-            backgroundMusic.play();
-            hideMusicControls();
-            document.body.removeEventListener('click', startMusicOnClick);
-        }, { once: true });
+  }
+
+  function showMusicControls() {
+    const controls = document.querySelector('.music-controls');
+    controls.style.display = 'block';
+    document.body.addEventListener('click', function startMusicOnClick() {
+      backgroundMusic.play();
+      document.body.removeEventListener('click', startMusicOnClick);
+    }, { once: true });
+  }
+
+  // Music control buttons
+  musicToggle.addEventListener('click', function() {
+    if (backgroundMusic.paused) {
+      backgroundMusic.play();
+      musicToggle.textContent = '🔊';
+    } else {
+      backgroundMusic.pause();
+      musicToggle.textContent = '▶️';
     }
-    
-    function hideMusicControls() {
-        const controls = document.querySelector('.music-controls');
+  });
+
+  musicMute.addEventListener('click', function() {
+    backgroundMusic.muted = !backgroundMusic.muted;
+    musicMute.textContent = backgroundMusic.muted ? '🔇' : '🔊';
+  });
+
+  // Start the music
+  playBackgroundMusic();
+
+  // Save music state in localStorage to maintain across pages
+  backgroundMusic.addEventListener('play', function() {
+    localStorage.setItem('backgroundMusicPlaying', 'true');
+  });
+
+  backgroundMusic.addEventListener('pause', function() {
+    localStorage.setItem('backgroundMusicPlaying', 'false');
+  });
+
+  // Restore state if user navigated from another page
+  if (localStorage.getItem('backgroundMusicPlaying') === 'true') {
+    backgroundMusic.play();
+  }
+
+  // Resume if user switches tabs
+  document.addEventListener('visibilitychange', function() {
+    if (!document.hidden && localStorage.getItem('backgroundMusicPlaying') === 'true') {
+      backgroundMusic.play();
     }
-    
-    // Music control buttons
-    musicToggle.addEventListener('click', function() {
-        if (backgroundMusic.paused) {
-            backgroundMusic.play();
-            musicToggle.textContent = '🔊';
-        } else {
-            backgroundMusic.pause();
-            musicToggle.textContent = '▶️';
-        }
-    });
-    
-    musicMute.addEventListener('click', function() {
-        backgroundMusic.muted = !backgroundMusic.muted;
-        musicMute.textContent = backgroundMusic.muted ? '🔊' : '🔇';
-    });
-    
-    // Start the music
-    playBackgroundMusic();
-    
-    // Save music state in localStorage to maintain across pages
-    backgroundMusic.addEventListener('play', function() {
-        localStorage.setItem('backgroundMusicPlaying', 'true');
-    });
-    
-    backgroundMusic.addEventListener('pause', function() {
-        localStorage.setItem('backgroundMusicPlaying', 'false');
-    });
-    
-    // Check previous state when loading new page
-    if (localStorage.getItem('backgroundMusicPlaying') === 'true') {
-        backgroundMusic.play();
-    }
-    
-    // Handle page visibility changes (when switching tabs)
-    document.addEventListener('visibilitychange', function() {
-        if (!document.hidden && localStorage.getItem('backgroundMusicPlaying') === 'true') {
-            backgroundMusic.play();
-        }
-    });
+  });
 });
