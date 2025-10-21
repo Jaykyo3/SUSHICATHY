@@ -9,29 +9,28 @@
 <body>
 
   <!-- Order Popup -->
-<div id="order-popup" class="popup-container" style="display:none;">
-  <div class="popup-box">
-    <h2>🍣 Place Your Order</h2>
-    <form id="order-form">
-      <input type="text" id="order-name" placeholder="Your Name" required>
-      <input type="text" id="order-address" placeholder="Your Address" required>
-      <input type="text" id="order-type" placeholder="Type of Sushi" required>
-      <input type="number" id="order-quantity" placeholder="Quantity" min="1" required>
-      <input type="email" id="order-email" placeholder="sushicatchy@gmail.com" required>
-      <div class="popup-buttons">
-        <button type="submit">Send Order</button>
-        <button type="button" id="close-popup">Cancel</button>
-      </div>
-    </form>
+  <div id="order-popup" class="popup-container" style="display:none;">
+    <div class="popup-box">
+      <h2>🍣 Place Your Order</h2>
+      <form id="order-form">
+        <input type="text" id="order-name" placeholder="Your Name" required>
+        <input type="text" id="order-address" placeholder="Your Address" required>
+        <input type="text" id="order-type" placeholder="Type of Sushi" required>
+        <input type="number" id="order-quantity" placeholder="Quantity" min="1" required>
+        <input type="email" id="order-email" placeholder="sushicatchy@gmail.com" required>
+        <div class="popup-buttons">
+          <button type="submit">Send Order</button>
+          <button type="button" id="close-popup">Cancel</button>
+        </div>
+      </form>
+    </div>
   </div>
-</div>
-
 
   <div id="page-loader" class="page-loader" aria-hidden="true">
-  <div class="loader-bar" role="progressbar">
-    <div class="loader-fill"></div>
+    <div class="loader-bar" role="progressbar">
+      <div class="loader-fill"></div>
+    </div>
   </div>
-</div>
 
   <!-- Navbar -->
   <header class="navbar">
@@ -60,119 +59,187 @@
     <h1>OUR&nbsp;PRODUCTS</h1>
   </div>
 
-  <!-- Product Section -->
-  <section class="product-list">
-    <div class="product-card">
-
+  <!-- Enhanced Product Section -->
+  <section class="products-container">
+    
+    <!-- Sushi Products -->
+    <div class="product-section">
+      <div class="section-header">
+        <div class="section-icon">🍣</div>
+        <h2>Fresh Sushi Selection</h2>
       </div>
-    </div>
+      
+      <div class="sushi-grid">
+        <!-- Salmon Sushi -->
+        <div class="sushi-card">
+          <div class="sushi-image">
+            <img src="assets/salmon.png" alt="Salmon Sushi">
+          </div>
+          <div class="sushi-info">
+            <h3>🍣 Salmon Sushi</h3>
+            <p class="sushi-description">Fresh, buttery salmon paired with soft rice — a timeless classic made every morning to perfection.</p>
+            <div class="sushi-details">
+              <span class="price">₱40</span>
+              <span class="rating">⭐️⭐️⭐️⭐️⭐️</span>
+            </div>
+            <button class="order-sushi-btn" data-sushi="Salmon Sushi">Add to Order</button>
+          </div>
+        </div>
 
-    <div class="product-card">
-      <div class="inner-card">
-        <img src="assets/salmon.png" alt="Salmon Sushi">
-        <div class="product-info">
-          <h2>🍣 Salmon Sushi</h2>
-          <p>
-            Fresh, buttery salmon paired with soft rice — a timeless classic  
-            made every morning to perfection by our expert chefs.
-          </p>
+        <!-- Tuna Sushi -->
+        <div class="sushi-card">
+          <div class="sushi-image">
+            <img src="assets/tuna.png" alt="Tuna Sushi">
+          </div>
+          <div class="sushi-info">
+            <h3>🐟 Tuna Sushi</h3>
+            <p class="sushi-description">Deep red tuna that melts in your mouth. A perfect balance of flavor and texture for sushi lovers.</p>
+            <div class="sushi-details">
+              <span class="price">₱40</span>
+              <span class="rating">⭐️⭐️⭐️⭐️⭐️</span>
+            </div>
+            <button class="order-sushi-btn" data-sushi="Tuna Sushi">Add to Order</button>
+          </div>
+        </div>
+
+        <!-- Crab Stick Roll -->
+        <div class="sushi-card">
+          <div class="sushi-image">
+            <img src="assets/crabstick.png" alt="Crab Stick Sushi">
+          </div>
+          <div class="sushi-info">
+            <h3>🦀 Crab Stick Roll</h3>
+            <p class="sushi-description">Sweet, savory, and wrapped in seaweed — a fan favorite among newcomers and pros alike.</p>
+            <div class="sushi-details">
+              <span class="price">₱30</span>
+              <span class="rating">⭐️⭐️⭐️⭐️☆</span>
+            </div>
+            <button class="order-sushi-btn" data-sushi="Crab Stick Roll">Add to Order</button>
+          </div>
+        </div>
+
+        <!-- Mango Sushi Roll -->
+        <div class="sushi-card">
+          <div class="sushi-image">
+            <img src="assets/mango.png" alt="Mango Sushi">
+          </div>
+          <div class="sushi-info">
+            <h3>🥭 Mango Sushi Roll</h3>
+            <p class="sushi-description">A tropical spin on sushi with fresh mango slices. Sweet, refreshing, and surprisingly addictive.</p>
+            <div class="sushi-details">
+              <span class="price">₱40</span>
+              <span class="rating">⭐️⭐️⭐️⭐️⭐️</span>
+            </div>
+            <button class="order-sushi-btn" data-sushi="Mango Sushi Roll">Add to Order</button>
+          </div>
+        </div>
+
+        <!-- Crabstick Mango -->
+        <div class="sushi-card">
+
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="product-card">
-      <div class="inner-card">
-        <img src="assets/tuna.png" alt="Tuna Sushi">
-        <div class="product-info">
-          <h2>🐟 Tuna Sushi</h2>
-          <p>
-            Deep red tuna that melts in your mouth.  
-            A perfect balance of flavor and texture for sushi lovers.
-          </p>
+    <!-- Game Demo Section -->
+    <div class="product-section">
+      <div class="section-header">
+        <div class="section-icon">🎯</div>
+        <h2>Try Our Game Demo</h2>
+      </div>
+      
+      <div class="game-demo">
+        <div class="demo-content">
+          <h3>Play Sushi Catch Game Demo</h3>
+          <p>Experience the fun of our sushi fishing game! Try to catch as many sushi rolls as you can!</p>
+          
+          <div class="game-teaser">
+            <p class="fun-message">"Wanna try our game without paying a price and just having fun?"</p>
+            <a href="https://aaggin.itch.io/sushi-catch?secret=d4ADUYEXkSfXrXob5MqlIAf8Hs" 
+               target="_blank" 
+               class="play-button">
+               🎮 Play Free Demo on itch.io
+            </a>
+          </div>
+          
+          <div class="game-features">
+            <div class="feature">
+              <span class="feature-icon">🎣</span>
+              <span class="feature-text">Interactive Fishing</span>
+            </div>
+            <div class="feature">
+              <span class="feature-icon">🍣</span>
+              <span class="feature-text">Virtual Sushi Prizes</span>
+            </div>
+            <div class="feature">
+              <span class="feature-icon">🏆</span>
+              <span class="feature-text">Skill-Based Gameplay</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="product-card">
-      <div class="inner-card">
-        <img src="assets/crabstick.png" alt="Crab Stick Sushi">
-        <div class="product-info">
-          <h2>🦀 Crab Stick Roll</h2>
-          <p>
-            Sweet, savory, and wrapped in seaweed —  
-            the Crab Stick Roll is a fan favorite among newcomers and pros alike.
-          </p>
+    <!-- Order & Download Section -->
+    <div class="product-section">
+      <div class="section-header">
+        <div class="section-icon">📱</div>
+        <h2>Order & Download</h2>
+      </div>
+      
+      <div class="order-section">
+        <div class="order-content">
+          <div class="order-info">
+            <h3>Order Your Favorite Sushi</h3>
+            <p>Get fresh sushi delivered or ready for pickup! Place your order through our app or website.</p>
+            
+            <div class="order-options">
+              <div class="option">
+                <span class="option-icon">🛵</span>
+                <span class="option-text">School Delivery</span>
+              </div>
+              <div class="option">
+                <span class="option-icon">🏫</span>
+                <span class="option-text">Pickup Available</span>
+              </div>
+              <div class="option">
+                <span class="option-icon">⚡</span>
+                <span class="option-text">Quick Preparation</span>
+              </div>
+            </div>
+            
+            <div class="order-buttons">
+              <a href="https://drive.google.com/file/d/1DeO9CJhW-ED_sB3ssdDOby-Oa7Yq7BIm/view?usp=drive_link" 
+                 target="_blank" 
+                 class="pixel-button download-btn">
+                 📲 Download App
+              </a>
+              <button class="pixel-button order-btn" id="main-order-btn">
+                 🍣 Order Now
+              </button>
+            </div>
+          </div>
+          <div class="order-image">
+            <img src="assets/appicon.png" alt="Sushi Catch App">
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="product-card">
-      <div class="inner-card">
-        <img src="assets/mango.png" alt="Mango Sushi">
-        <div class="product-info">
-          <h2>🥭 Mango Sushi Roll</h2>
-          <p>
-            A tropical spin on sushi with fresh mango slices.  
-            Sweet, refreshing, and surprisingly addictive.
-          </p>
-        </div>
-      </div>
-    </div>
-
-
-
-    <!-- New Order + Download Section -->
-    <div class="product-card">
-      <div class="inner-card">
-        <img src="assets/appicon.png" alt="Sushi Catch App">
-        <div class="product-info">
-          <h2>📱 Order Products Online</h2>
-          <p>
-            Order your favorite sushi directly through our official website or app!  
-            Whether you're craving fresh sushi or want to reserve ahead, Sushi Catch makes it easy.
-          </p>
-          <p class="button-row">
-            <a href="https://drive.google.com/file/d/1DeO9CJhW-ED_sB3ssdDOby-Oa7Yq7BIm/view?usp=drive_link" 
-               target="_blank" class="pixel-button download-btn">📲 Download Sushi Catch App</a>
-            <a href="#" class="pixel-button order-btn">🍣 Order Now</a>
-          </p>
-        </div>
-      </div>
-    </div>
   </section>
 
-      <!-- Add this to your products section -->
-<div class="game-demo">
-    <h3>Play Sushi Catch Game Demo</h3>
-    <p>Experience the fun of our sushi fishing game! Try to catch as many sushi rolls as you can!</p>
-    
-    <div class="game-teaser">
-        <p class="fun-message">"Wanna try our game without paying a price and just having fun?"</p>
-        <a href="https://aaggin.itch.io/sushi-catch?secret=d4ADUYEXkSfXrXob5MqlIAf8Hs" 
-           target="_blank" 
-           class="play-button">
-           🎮 Play Free Demo on itch.io
-        </a>
-    </div>
-    
-    <div class="game-preview">
-        <p><small>Play our interactive fishing game and win virtual sushi prizes!</small></p>
-    </div>
-</div>
-
-
-
-<!-- Add this to your HTML file, preferably in the head or before closing body -->
-<audio id="backgroundMusic" loop>
+  <!-- Background Music -->
+  <audio id="backgroundMusic" loop>
     <source src="assets/retrowave.ogg" type="audio/ogg">
     Your browser does not support the audio element.
-</audio>
+  </audio>
 
-<!-- Optional: Music controls for users -->
-<div class="music-controls">
+  <!-- Music Controls -->
+  <div class="music-controls">
     <button id="musicToggle" class="music-btn">🔊</button>
     <button id="musicMute" class="music-btn">🔇</button>
-</div>
+  </div>
 
   <script src="script.js"></script>
 </body>

@@ -23,7 +23,6 @@
     <div class="menu-icon" id="menu-btn">&#9776;</div>
   </header>
 
-
   <!-- Navigation -->
   <nav class="nav-menu" id="nav-menu">
     <a href="AboutUs.html">About Us</a>
@@ -43,60 +42,158 @@
     <h1>CONTACT&nbsp;US</h1>
   </div>
 
-  <!-- Contact Info -->
-  <section class="contact-section">
-    <div class="contact-box">
-      <div class="inner-box">
-        <h2>📍 Location</h2>
-        <p>Don Bosco High School Parañaque</p>
+  <!-- Contact Container -->
+  <div class="contact-container">
+    
+    <!-- Contact Info Section -->
+    <section class="contact-info-section">
+      <div class="contact-header">
+        <h2>📞 Reach Out to Us</h2>
+        <p>We'd love to hear from you! Get in touch through any of these channels.</p>
       </div>
-    </div>
 
-    <div class="contact-box">
-      <div class="inner-box">
-        <h2>☎️ Phone</h2>
-        <p>+63 912 345 6789</p>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <div class="contact-icon">📍</div>
+          <div class="contact-details">
+            <h3>Our Location</h3>
+            <p>Don Bosco High School Parañaque</p>
+            <p class="contact-note">Operating near the canteen during school hours</p>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon">☎️</div>
+          <div class="contact-details">
+            <h3>Phone Number</h3>
+            <p>+63 912 345 6789</p>
+            <p class="contact-note">Available during school operating hours</p>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon">📧</div>
+          <div class="contact-details">
+            <h3>Email Address</h3>
+            <p><a href="mailto:sushicatch@gmail.com">sushicatch@gmail.com</a></p>
+            <p class="contact-note">We respond within 24 hours</p>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon">🌐</div>
+          <div class="contact-details">
+            <h3>Social Media</h3>
+            <div class="social-links">
+              <a href="#" class="social-link">Facebook</a>
+            </div>
+            <p class="contact-note">Follow us for updates and promotions!</p>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon">🕒</div>
+          <div class="contact-details">
+            <h3>Operating Hours</h3>
+            <p>Monday - Friday: 7:30 AM - 4:30 PM</p>
+            <p class="contact-note">During school days only</p>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon">👥</div>
+          <div class="contact-details">
+            <h3>Team Members</h3>
+            <p>Grade 12 - MARS</p>
+            <p class="contact-note">5 dedicated students ready to serve you!</p>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <div class="contact-box">
-      <div class="inner-box">
-        <h2>📧 Email</h2>
-        <p><a href="mailto:sushicatch@gmail.com">sushicatchy@gmail.com</a></p>
+    <!-- Contact Form Section -->
+    <section class="contact-form-section">
+      <div class="form-header">
+        <h2>💌 Send Us a Message</h2>
+        <p>Have questions, suggestions, or want to place a large order? Fill out the form below!</p>
       </div>
-    </div>
 
-    <div class="contact-box">
-      <div class="inner-box">
-        <h2>🌐 Socials</h2>
-        <p>
-          <a href="#">Facebook</a> |
-          <a href="#">Instagram</a> |
-          <a href="#">TikTok</a>
-        </p>
+      <form class="contact-form">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" placeholder="Enter your full name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Your Email</label>
+          <input type="email" id="email" placeholder="Enter your email address" required>
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <select id="subject" required>
+            <option value="">Select a topic</option>
+            <option value="order">Order Inquiry</option>
+            <option value="feedback">Feedback</option>
+            <option value="partnership">Partnership</option>
+            <option value="complaint">Complaint</option>
+            <option value="suggestion">Suggestion</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Your Message</label>
+          <textarea id="message" rows="6" placeholder="Type your message here..." required></textarea>
+        </div>
+
+        <div class="form-group checkbox-group">
+          <input type="checkbox" id="newsletter" checked>
+          <label for="newsletter">Send me updates about new products and promotions</label>
+        </div>
+
+        <button type="submit" class="submit-btn">
+          <span class="btn-icon">🚀</span>
+          SEND MESSAGE
+        </button>
+      </form>
+    </section>
+
+    <!-- Map Placeholder Section -->
+    <section class="map-section">
+      <div class="divider">
+        <h1>FIND&nbsp;US</h1>
       </div>
-    </div>
+      
+      <div class="map-container">
+        <div class="map-placeholder">
+          <div class="map-overlay">
+            <h3>📍 Our Location</h3>
+            <p>Don Bosco High School Parañaque</p>
+            <p>Look for us near the canteen area!</p>
+          </div>
+          <!-- You can replace this with an actual Google Maps embed later -->
+          <div class="map-image">
+            <img src="assets/map-placeholder.png" alt="Map Location" style="width:100%; height:100%; object-fit:cover;">
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <!-- Optional Message Form -->
-    <form class="contact-form">
-      <input type="text" placeholder="Your Name">
-      <input type="email" placeholder="Your Email">
-      <textarea rows="4" placeholder="Your Message"></textarea>
-      <button type="submit">SEND</button>
-    </form>
-  </section>
+  </div>
 
-  <!-- Add this to your HTML file, preferably in the head or before closing body -->
-<audio id="backgroundMusic" loop>
+  <!-- Background Music -->
+  <audio id="backgroundMusic" loop>
     <source src="assets/retrowave.ogg" type="audio/ogg">
     Your browser does not support the audio element.
-</audio>
+  </audio>
 
-<!-- Optional: Music controls for users -->
-<div class="music-controls">
+  <!-- Music Controls -->
+  <div class="music-controls">
     <button id="musicToggle" class="music-btn">🔊</button>
     <button id="musicMute" class="music-btn">🔇</button>
-</div>
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>

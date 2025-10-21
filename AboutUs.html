@@ -37,10 +37,20 @@
     <img src="assets/sushimascot.png" alt="Sushi Mascot" class="mascot">
   </section>
 
-  <!-- Pixel Divider -->
-  <div class="divider">
-    <h1>ABOUT&nbsp;US</h1>
-  </div>
+  <!-- Video Section -->
+  <section class="video-section">
+    <div class="divider">
+      <h1>ABOUT&nbsp;US</h1>
+    </div>
+    
+    <div class="video-container">
+      <video class="about-video" controls poster="assets/video-poster.jpg">
+        <source src="assets/aboutus.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      </div>
+    </div>
+  </section>
 
   <!-- About Section -->
   <div class="main-content">
@@ -64,7 +74,7 @@
             Each fish might reward you with a random sushi — or nothing at all.
           </p>
           <p>
-            🍣 <strong>Buy Mode:</strong> Purchase sushi directly, no fishing needed — it’s more expensive but guaranteed.
+            🍣 <strong>Buy Mode:</strong> Purchase sushi directly, no fishing needed — it's more expensive but guaranteed.
           </p>
         </div>
       </div>
@@ -74,91 +84,105 @@
           <h2>🌊 Why Sushi Catch?</h2>
           <p>
             We make sushi an adventure!  
-            Whether you’re gaming or dining, every moment feels like a pixel-perfect experience under the sea.
+            Whether you're gaming or dining, every moment feels like a pixel-perfect experience under the sea.
           </p>
         </div>
       </div>
     </div>
-    <!-- Add this to your about US.html file -->
-<section class="about-content">
-    <div class="mission-vision">
-        <div class="card">
+
+    <!-- Mission & Vision Section -->
+    <section class="about-content">
+      <div class="divider">
+        <h1>OUR&nbsp;MISSION</h1>
+      </div>
+      
+      <div class="mission-vision">
+        <div class="mission-card">
+          <div class="inner-box">
             <h3>🎯 Our Mission</h3>
             <p>To provide affordable and high-quality sushi while delivering a unique and fun experience for customers.</p>
+          </div>
         </div>
         
-        <div class="card">
+        <div class="mission-card">
+          <div class="inner-box">
             <h3>👁️ Our Vision</h3>
             <p>To be recognized as the most innovative and enjoyable food venture within the school community.</p>
+          </div>
         </div>
         
-        <div class="card">
+        <div class="mission-card">
+          <div class="inner-box">
             <h3>💫 Our Core Values</h3>
             <ul>
-                <li>Creativity</li>
-                <li>Quality</li>
-                <li>Fun</li>
-                <li>Customer Satisfaction</li>
-                <li>Teamwork</li>
+              <li>Creativity</li>
+              <li>Quality</li>
+              <li>Fun</li>
+              <li>Customer Satisfaction</li>
+              <li>Teamwork</li>
             </ul>
+          </div>
         </div>
         
-        <div class="card tagline-card">
+        <div class="mission-card tagline-card">
+          <div class="inner-box">
             <h3>🎣 Our Tagline</h3>
             <p class="tagline">"Catch the Fun, Taste the Flavor!"</p>
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<!-- Business Objectives Section -->
-<section class="business-objectives">
-    <div class="divider">
+    <!-- Business Objectives Section -->
+    <section class="business-objectives">
+      <div class="divider">
         <h1>BUSINESS&nbsp;OBJECTIVES</h1>
-    </div>
-    
-    <div class="objectives-grid">
+      </div>
+      
+      <div class="objectives-grid">
         <div class="objective-card">
-            <div class="inner-box">
-                <h3>🎯 Daily Sales</h3>
-                <p>Sell at least <strong>30 sushi orders</strong> daily</p>
-            </div>
+          <div class="inner-box">
+            <h3>🎯 Daily Sales</h3>
+            <p>Sell at least <strong>30 sushi orders</strong> daily</p>
+          </div>
         </div>
         
         <div class="objective-card">
-            <div class="inner-box">
-                <h3>🎮 Game Engagement</h3>
-                <p>Attract <strong>15+ game players</strong> per day</p>
-            </div>
+          <div class="inner-box">
+            <h3>🎮 Game Engagement</h3>
+            <p>Attract <strong>15+ game players</strong> per day</p>
+          </div>
         </div>
         
         <div class="objective-card">
-            <div class="inner-box">
-                <h3>⭐ Customer Feedback</h3>
-                <p>Achieve <strong>positive feedback above 80%</strong></p>
-            </div>
+          <div class="inner-box">
+            <h3>⭐ Customer Feedback</h3>
+            <p>Achieve <strong>positive feedback above 80%</strong></p>
+          </div>
         </div>
         
         <div class="objective-card">
-            <div class="inner-box">
-                <h3>💰 Financial Goal</h3>
-                <p>Recover <strong>startup capital within 2 months</strong></p>
-            </div>
+          <div class="inner-box">
+            <h3>💰 Financial Goal</h3>
+            <p>Recover <strong>startup capital within 2 months</strong></p>
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
   </div>
 
-  <!-- Add this to your HTML file, preferably in the head or before closing body -->
-<audio id="backgroundMusic" loop>
+  <!-- Background Music -->
+  <audio id="backgroundMusic" loop>
     <source src="assets/retrowave.ogg" type="audio/ogg">
     Your browser does not support the audio element.
-</audio>
+  </audio>
 
-<!-- Optional: Music controls for users -->
-<div class="music-controls">
+  <!-- Music Controls -->
+  <div class="music-controls">
     <button id="musicToggle" class="music-btn">🔊</button>
     <button id="musicMute" class="music-btn">🔇</button>
-</div>
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>

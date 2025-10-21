@@ -1179,145 +1179,233 @@ ul li {
     }
 }
 
-/* === BUSINESS PLAN PAGE === */
-.business-hero {
-  height: 70vh;
-  background: url('assets/sushihero.png') center/cover no-repeat;
+/* === BUSINESS PLAN - ENHANCED SECTIONING === */
+.business-plan-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* Plan Sections */
+.plan-section {
+  margin-bottom: 3rem;
+  background: rgba(255, 255, 255, 0.95);
+  border: 4px solid black;
+  border-radius: 8px;
+  box-shadow: 0 0 0 6px #045b73 inset;
+  overflow: hidden;
+}
+
+.section-header {
+  background: linear-gradient(135deg, #045b73, #067b9d);
+  padding: 1.5rem 2rem;
+  border-bottom: 4px solid black;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  text-align: center;
-  position: relative;
-  box-shadow: 0 0 0 4px black;
+  gap: 1rem;
 }
 
-.business-hero img.logo {
-  width: 40%;
-  image-rendering: pixelated;
-  max-width: 500px;
+.section-header .section-icon {
+  font-size: 2rem;
 }
 
-.business-hero h2 {
+.section-header h2 {
   color: white;
-  font-size: 1rem;
-  margin-top: 1rem;
-  text-shadow:
+  margin: 0;
+  font-size: 1.2rem;
+  text-shadow: 
     -2px -2px 0 #000,
      2px -2px 0 #000,
     -2px  2px 0 #000,
      2px  2px 0 #000;
 }
 
-/* Business Sections */
-.business-section {
+.section-content {
   padding: 2rem;
 }
 
-.business-card {
-  width: 90%;
-  max-width: 800px;
-  margin: 0 auto;
-  background: rgba(255, 255, 255, 0.95);
-  border: 4px solid black;
-  border-radius: 6px;
-  box-shadow: 0 0 0 6px #045b73 inset;
-}
-
-.business-card .inner-box {
-  background: white;
-  border: 3px solid black;
-  border-radius: 4px;
-  padding: 2rem;
-}
-
-.business-card h3 {
-  color: #045b73;
-  margin: 1.5rem 0 1rem 0;
-  font-size: 1rem;
-}
-
-.business-card h3:first-child {
-  margin-top: 0;
-}
-
-.business-card ul {
-  list-style: none;
-  padding: 0;
-}
-
-.business-card li {
-  padding: 0.5rem 0;
-  position: relative;
-  padding-left: 1.5rem;
-  font-size: 0.8rem;
-  color: #04364A;
-}
-
-.business-card li:before {
-  content: "🍣";
-  position: absolute;
-  left: 0;
-}
-
-/* Analysis Grid */
-.analysis-grid {
+/* Executive Summary */
+.summary-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1.5rem;
-  margin: 2rem auto;
-  max-width: 1200px;
 }
 
-.analysis-card {
-  background: rgba(255, 255, 255, 0.95);
-  border: 4px solid black;
-  border-radius: 6px;
-  box-shadow: 0 0 0 6px #045b73 inset;
-}
-
-.analysis-card .inner-box {
-  background: white;
+.summary-card {
+  background: #f8f9fa;
   border: 3px solid black;
-  border-radius: 4px;
-  padding: 1.5rem;
-  height: 100%;
-  text-align: center;
+  border-radius: 6px;
 }
 
-.analysis-card h3 {
+.summary-card .inner-box {
+  padding: 1.5rem;
+  background: white;
+}
+
+.summary-card h3 {
   color: #045b73;
   margin-bottom: 1rem;
   font-size: 0.9rem;
 }
 
-.analysis-card p {
+.summary-card p {
   color: #04364A;
   font-size: 0.8rem;
   line-height: 1.5;
 }
 
-/* Operations Grid */
+/* Company Overview */
+.overview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.overview-card {
+  background: #f8f9fa;
+  border: 3px solid black;
+  border-radius: 6px;
+}
+
+.overview-card .inner-box {
+  padding: 1.5rem;
+  background: white;
+  text-align: center;
+}
+
+.overview-card h3 {
+  color: #045b73;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.overview-card p {
+  color: #04364A;
+  font-size: 0.75rem;
+  line-height: 1.4;
+}
+
+/* Market Analysis */
+.analysis-main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.target-market, .value-proposition {
+  background: #f8f9fa;
+  border: 3px solid black;
+  border-radius: 6px;
+}
+
+.target-market .inner-box, .value-proposition .inner-box {
+  padding: 1.5rem;
+  background: white;
+}
+
+.target-market h3, .value-proposition h3 {
+  color: #045b73;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.market-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.market-segment h4 {
+  color: #067b9d;
+  margin-bottom: 0.5rem;
+  font-size: 0.8rem;
+}
+
+.market-segment p {
+  color: #04364A;
+  font-size: 0.7rem;
+  line-height: 1.4;
+}
+
+.value-proposition ul {
+  list-style: none;
+  padding: 0;
+}
+
+.value-proposition li {
+  padding: 0.3rem 0;
+  position: relative;
+  padding-left: 1.5rem;
+  font-size: 0.75rem;
+  color: #04364A;
+}
+
+.value-proposition li:before {
+  content: "✅";
+  position: absolute;
+  left: 0;
+}
+
+/* PESTLE Analysis */
+.pestle-section {
+  margin-top: 2rem;
+}
+
+.subsection-title {
+  text-align: center;
+  color: #045b73;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.pestle-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.pestle-card {
+  background: #f8f9fa;
+  border: 3px solid black;
+  border-radius: 6px;
+}
+
+.pestle-card .inner-box {
+  padding: 1rem;
+  background: white;
+  text-align: center;
+  height: 100%;
+}
+
+.pestle-card h4 {
+  color: #045b73;
+  margin-bottom: 0.5rem;
+  font-size: 0.8rem;
+}
+
+.pestle-card p {
+  color: #04364A;
+  font-size: 0.7rem;
+  line-height: 1.3;
+}
+
+/* Operations Plan */
 .operations-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
-  margin: 2rem auto;
-  max-width: 1200px;
 }
 
 .operation-card {
-  background: rgba(255, 255, 255, 0.95);
-  border: 4px solid black;
+  background: #f8f9fa;
+  border: 3px solid black;
   border-radius: 6px;
-  box-shadow: 0 0 0 6px #045b73 inset;
 }
 
 .operation-card .inner-box {
-  background: white;
-  border: 3px solid black;
-  border-radius: 4px;
   padding: 1.5rem;
+  background: white;
   text-align: center;
   height: 100%;
 }
@@ -1331,29 +1419,124 @@ ul li {
 .operation-card p {
   color: #04364A;
   font-size: 0.75rem;
-  line-height: 1.5;
+  line-height: 1.4;
+}
+
+/* Financial Plan */
+.financial-highlights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.finance-card {
+  background: #f8f9fa;
+  border: 3px solid black;
+  border-radius: 6px;
+}
+
+.finance-card .inner-box {
+  padding: 1.5rem;
+  background: white;
+  text-align: center;
+}
+
+.finance-card h3 {
+  color: #045b73;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.finance-card .amount {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #00aaff;
+  margin-bottom: 0.5rem;
+}
+
+.finance-card p {
+  color: #04364A;
+  font-size: 0.75rem;
+}
+
+/* Pricing Section */
+.pricing-section {
+  background: #f8f9fa;
+  border: 3px solid black;
+  border-radius: 6px;
+}
+
+.pricing-section .inner-box {
+  padding: 2rem;
+  background: white;
+}
+
+.pricing-section h3 {
+  color: #045b73;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.pricing-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.pricing-table th {
+  background: #045b73;
+  color: white;
+  padding: 0.8rem;
+  border: 2px solid black;
+  text-shadow: none;
+}
+
+.pricing-table td {
+  padding: 0.6rem;
+  border: 2px solid black;
+  text-align: center;
+  background: white;
+}
+
+.pricing-table tr:nth-child(even) {
+  background: #f0f8ff;
+}
+
+.profit-summary {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.profit-summary p {
+  background: #e6f7ff;
+  padding: 0.8rem;
+  border: 2px solid black;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  color: #04364A;
 }
 
 /* SWOT Analysis */
 .swot-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
-  margin: 2rem auto;
-  max-width: 1200px;
 }
 
 .swot-card {
-  background: rgba(255, 255, 255, 0.95);
-  border: 4px solid black;
+  border: 3px solid black;
   border-radius: 6px;
 }
 
 .swot-card .inner-box {
-  background: white;
-  border: 3px solid black;
-  border-radius: 4px;
   padding: 1.5rem;
+  background: white;
   height: 100%;
 }
 
@@ -1374,6 +1557,7 @@ ul li {
   padding-left: 1.5rem;
   font-size: 0.75rem;
   color: #04364A;
+  line-height: 1.3;
 }
 
 .swot-card li:before {
@@ -1381,59 +1565,928 @@ ul li {
   left: 0;
 }
 
+/* SWOT Color Coding */
 .strengths {
   box-shadow: 0 0 0 6px #4CAF50 inset;
 }
-
 .strengths h3 { color: #4CAF50; }
 .strengths li:before { content: "✅"; }
 
 .weaknesses {
   box-shadow: 0 0 0 6px #FF9800 inset;
 }
-
 .weaknesses h3 { color: #FF9800; }
 .weaknesses li:before { content: "⚠️"; }
 
 .opportunities {
   box-shadow: 0 0 0 6px #2196F3 inset;
 }
-
 .opportunities h3 { color: #2196F3; }
 .opportunities li:before { content: "🚀"; }
 
 .threats {
   box-shadow: 0 0 0 6px #F44336 inset;
 }
-
 .threats h3 { color: #F44336; }
 .threats li:before { content: "🌪️"; }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .analysis-grid,
+  .business-plan-container {
+    padding: 1rem 0.5rem;
+  }
+  
+  .section-content {
+    padding: 1rem;
+  }
+  
+  .summary-grid,
+  .overview-grid,
+  .analysis-main,
   .operations-grid,
+  .financial-highlights,
   .swot-grid {
     grid-template-columns: 1fr;
   }
   
-  .business-section {
-    padding: 1rem;
+  .market-details,
+  .profit-summary {
+    grid-template-columns: 1fr;
   }
   
-  .business-card {
-    width: 95%;
+  .pestle-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 480px) {
-  .business-card .inner-box {
+  .section-header {
+    padding: 1rem;
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+  
+  .pestle-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .pricing-table {
+    font-size: 0.6rem;
+  }
+}
+
+/* === VIDEO SECTION === */
+.video-section {
+  padding: 2rem;
+  text-align: center;
+}
+
+.video-container {
+  position: relative;
+  width: 90%;
+  max-width: 800px;
+  margin: 2rem auto;
+  background: rgba(255, 255, 255, 0.95);
+  border: 4px solid black;
+  border-radius: 8px;
+  box-shadow: 0 0 0 6px #045b73 inset;
+  overflow: hidden;
+}
+
+.about-video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 3px solid black;
+  border-radius: 4px;
+  image-rendering: pixelated;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(4, 91, 115, 0.9);
+  color: white;
+  padding: 1rem 2rem;
+  border: 3px solid black;
+  border-radius: 6px;
+  text-align: center;
+  backdrop-filter: blur(5px);
+}
+
+.video-overlay p {
+  margin: 0;
+  font-size: 0.9rem;
+  text-shadow: 
+    -1px -1px 0 #000,
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000;
+}
+
+/* === MISSION & VISION UPDATES === */
+.about-content {
+  padding: 2rem;
+}
+
+.mission-vision {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.mission-card {
+  background: rgba(255, 255, 255, 0.95);
+  border: 4px solid black;
+  border-radius: 6px;
+  box-shadow: 0 0 0 6px #045b73 inset;
+}
+
+.mission-card .inner-box {
+  background: white;
+  border: 3px solid black;
+  border-radius: 4px;
+  padding: 1.5rem;
+  text-align: center;
+  height: 100%;
+}
+
+.mission-card h3 {
+  color: #045b73;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.mission-card p {
+  color: #04364A;
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+.mission-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.mission-card li {
+  padding: 0.3rem 0;
+  position: relative;
+  padding-left: 1.5rem;
+  font-size: 0.75rem;
+  color: #04364A;
+  text-align: left;
+}
+
+.mission-card li:before {
+  content: "🍣";
+  position: absolute;
+  left: 0;
+}
+
+.tagline-card {
+  box-shadow: 0 0 0 6px #4ecdc4 inset !important;
+}
+
+.tagline {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #4ecdc4;
+  text-align: center;
+  font-style: italic;
+  margin: 0;
+}
+
+/* === BUSINESS OBJECTIVES === */
+.business-objectives {
+  padding: 2rem;
+}
+
+.objectives-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.objective-card {
+  background: rgba(255, 255, 255, 0.95);
+  border: 4px solid black;
+  border-radius: 6px;
+  box-shadow: 0 0 0 6px #045b73 inset;
+}
+
+.objective-card .inner-box {
+  background: white;
+  border: 3px solid black;
+  border-radius: 4px;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.objective-card h3 {
+  color: #045b73;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.objective-card p {
+  color: #04364A;
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+/* === RESPONSIVE DESIGN === */
+@media (max-width: 768px) {
+  .video-section {
     padding: 1rem;
   }
   
-  .analysis-card .inner-box,
-  .operation-card .inner-box,
-  .swot-card .inner-box {
+  .video-container {
+    width: 95%;
+  }
+  
+  .video-overlay {
+    padding: 0.8rem 1.5rem;
+  }
+  
+  .video-overlay p {
+    font-size: 0.8rem;
+  }
+  
+  .mission-vision,
+  .objectives-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .about-content,
+  .business-objectives {
     padding: 1rem;
   }
 }
+
+@media (max-width: 480px) {
+  .video-overlay {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    margin: 1rem;
+  }
+  
+  .mission-card .inner-box,
+  .objective-card .inner-box {
+    padding: 1rem;
+  }
+}
+
+/* === CONTACT PAGE ENHANCEMENTS === */
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Contact Info Section */
+.contact-info-section {
+  margin-bottom: 3rem;
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.95);
+  border: 4px solid black;
+  border-radius: 8px;
+  box-shadow: 0 0 0 6px #045b73 inset;
+}
+
+.contact-header h2 {
+  color: #045b73;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.contact-header p {
+  color: #04364A;
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1.5rem;
+}
+
+.contact-card {
+  background: rgba(255, 255, 255, 0.95);
+  border: 4px solid black;
+  border-radius: 8px;
+  box-shadow: 0 0 0 6px #045b73 inset;
+  padding: 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-2px);
+}
+
+.contact-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.contact-details {
+  flex: 1;
+}
+
+.contact-details h3 {
+  color: #045b73;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.contact-details p {
+  color: #04364A;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  margin-bottom: 0.3rem;
+}
+
+.contact-note {
+  color: #666 !important;
+  font-size: 0.7rem !important;
+  font-style: italic;
+}
+
+.social-links {
+  display: flex;
+  gap: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.social-link {
+  color: #045b73;
+  text-decoration: none;
+  font-size: 0.75rem;
+  padding: 0.3rem 0.6rem;
+  border: 2px solid #045b73;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.social-link:hover {
+  background: #045b73;
+  color: white;
+}
+
+/* Contact Form Section */
+.contact-form-section {
+  background: rgba(255, 255, 255, 0.95);
+  border: 4px solid black;
+  border-radius: 8px;
+  box-shadow: 0 0 0 6px #045b73 inset;
+  padding: 2rem;
+  margin-bottom: 3rem;
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.form-header h2 {
+  color: #045b73;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.form-header p {
+  color: #04364A;
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  color: #045b73;
+  margin-bottom: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 3px solid black;
+  border-radius: 6px;
+  background: white;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.7rem;
+  color: #04364A;
+  outline: none;
+  image-rendering: pixelated;
+  transition: border-color 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #00aaff;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: auto;
+  transform: scale(1.2);
+}
+
+.checkbox-group label {
+  margin: 0;
+  font-weight: normal;
+  font-size: 0.7rem;
+}
+
+.submit-btn {
+  background: linear-gradient(135deg, #045b73, #067b9d);
+  color: white;
+  border: 3px solid black;
+  padding: 1rem 2rem;
+  border-radius: 6px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.submit-btn:hover {
+  background: linear-gradient(135deg, #067b9d, #045b73);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(4, 91, 115, 0.3);
+}
+
+.btn-icon {
+  font-size: 1rem;
+}
+
+/* Map Section */
+.map-section {
+  margin-bottom: 2rem;
+}
+
+.map-container {
+  background: rgba(255, 255, 255, 0.95);
+  border: 4px solid black;
+  border-radius: 8px;
+  box-shadow: 0 0 0 6px #045b73 inset;
+  overflow: hidden;
+}
+
+.map-placeholder {
+  position: relative;
+  height: 300px;
+  background: #e6f7ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.map-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(4, 91, 115, 0.9);
+  color: white;
+  padding: 1.5rem;
+  border: 3px solid black;
+  border-radius: 6px;
+  text-align: center;
+  z-index: 2;
+  backdrop-filter: blur(5px);
+}
+
+.map-overlay h3 {
+  margin-bottom: 0.8rem;
+  font-size: 0.9rem;
+  text-shadow: 
+    -1px -1px 0 #000,
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000;
+}
+
+.map-overlay p {
+  margin: 0.3rem 0;
+  font-size: 0.7rem;
+  text-shadow: 
+    -1px -1px 0 #000,
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000;
+}
+
+.map-image {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #cceeff, #99ddff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-container {
+    padding: 1rem;
+  }
+  
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-card {
+    padding: 1rem;
+  }
+  
+  .contact-form-section {
+    padding: 1.5rem;
+  }
+  
+  .social-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .map-overlay {
+    padding: 1rem;
+  }
+  
+  .map-overlay h3 {
+    font-size: 0.8rem;
+  }
+  
+  .map-overlay p {
+    font-size: 0.65rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .contact-icon {
+    margin-bottom: 0.5rem;
+  }
+  
+  .checkbox-group {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .submit-btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.7rem;
+  }
+}
+
+/* === ENHANCED PRODUCTS PAGE === */
+.products-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Product Sections */
+.product-section {
+  margin-bottom: 3rem;
+  background: rgba(255, 255, 255, 0.95);
+  border: 4px solid black;
+  border-radius: 8px;
+  box-shadow: 0 0 0 6px #045b73 inset;
+  overflow: hidden;
+}
+
+.section-header {
+  background: linear-gradient(135deg, #045b73, #067b9d);
+  padding: 1.5rem 2rem;
+  border-bottom: 4px solid black;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.section-header .section-icon {
+  font-size: 2rem;
+}
+
+.section-header h2 {
+  color: white;
+  margin: 0;
+  font-size: 1.2rem;
+  text-shadow: 
+    -2px -2px 0 #000,
+     2px -2px 0 #000,
+    -2px  2px 0 #000,
+     2px  2px 0 #000;
+}
+
+/* Sushi Grid */
+.sushi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.sushi-card {
+  background: #f8f9fa;
+  border: 3px solid black;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.sushi-card:hover {
+  transform: translateY(-2px);
+}
+
+.sushi-image {
+  height: 200px;
+  overflow: hidden;
+}
+
+.sushi-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  image-rendering: pixelated;
+}
+
+.sushi-info {
+  padding: 1.5rem;
+}
+
+.sushi-info h3 {
+  color: #045b73;
+  margin-bottom: 0.8rem;
+  font-size: 0.9rem;
+}
+
+.sushi-description {
+  color: #04364A;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
+
+.sushi-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.price {
+  color: #00aaff;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.rating {
+  font-size: 0.7rem;
+}
+
+.order-sushi-btn {
+  width: 100%;
+  background: #045b73;
+  color: white;
+  border: 2px solid black;
+  padding: 0.8rem;
+  border-radius: 4px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.7rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.order-sushi-btn:hover {
+  background: #067b9d;
+}
+
+/* Enhanced Game Demo */
+.demo-content {
+  padding: 2rem;
+  text-align: center;
+}
+
+.demo-content h3 {
+  color: #045b73;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.demo-content p {
+  color: #04364A;
+  font-size: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.game-features {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.feature-icon {
+  font-size: 1.5rem;
+}
+
+.feature-text {
+  color: #04364A;
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+/* Order Section */
+.order-section {
+  padding: 2rem;
+}
+
+.order-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.order-info h3 {
+  color: #045b73;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.order-info p {
+  color: #04364A;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.order-options {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.option-icon {
+  font-size: 1.2rem;
+}
+
+.option-text {
+  color: #04364A;
+  font-size: 0.7rem;
+  text-align: center;
+}
+
+.order-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.order-image img {
+  width: 100%;
+  max-width: 200px;
+  border: 3px solid black;
+  border-radius: 8px;
+  image-rendering: pixelated;
+}
+
+/* Updated Pixel Buttons */
+.pixel-button {
+  display: inline-block;
+  border: 3px solid black;
+  padding: 0.8rem 1.2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.7rem;
+  text-shadow: none;
+  box-shadow: 0 0 0 3px black;
+  transition: transform 0.2s ease, background 0.2s ease;
+  text-align: center;
+  cursor: pointer;
+}
+
+.pixel-button:hover {
+  transform: scale(1.05);
+}
+
+.download-btn {
+  background: #045b73;
+  color: white;
+}
+
+.order-btn {
+  background: #00aaff;
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .products-container {
+    padding: 1rem;
+  }
+  
+  .sushi-grid {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+  }
+  
+  .order-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .order-options {
+    justify-content: center;
+  }
+  
+  .order-buttons {
+    flex-direction: column;
+  }
+  
+  .game-features {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-header {
+    padding: 1rem;
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+  
+  .sushi-info {
+    padding: 1rem;
+  }
+  
+  .demo-content {
+    padding: 1.5rem;
+  }
+} 
