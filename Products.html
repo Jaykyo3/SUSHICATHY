@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products - Sushi Catch</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Order Popup -->
+<div id="order-popup" class="popup-container" style="display:none;">
+  <div class="popup-box">
+    <h2>🍣 Place Your Order</h2>
+    <form id="order-form">
+      <input type="text" id="order-name" placeholder="Your Name" required>
+      <input type="text" id="order-address" placeholder="Your Address" required>
+      <input type="text" id="order-type" placeholder="Type of Sushi" required>
+      <input type="number" id="order-quantity" placeholder="Quantity" min="1" required>
+      <input type="email" id="order-email" placeholder="Your Email" required>
+      <div class="popup-buttons">
+        <button type="submit">Send Order</button>
+        <button type="button" id="close-popup">Cancel</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+  <div id="page-loader" class="page-loader" aria-hidden="true">
+  <div class="loader-bar" role="progressbar">
+    <div class="loader-fill"></div>
+  </div>
+</div>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="assets/sushicatchlogo.png" alt="Sushi Catch Logo" style="height:50px; image-rendering:pixelated;">
+    </div>
+    <div class="menu-icon" id="menu-btn">&#9776;</div>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="nav-menu" id="nav-menu">
+    <a href="AboutUs.html">About Us</a>
+    <a href="Products.html">Products Offered</a>
+    <a href="ContactUs.html">Contact Us</a>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero products-hero">
+    <img src="assets/sushicatchlogo.png" alt="Sushi Catch Logo" class="logo">
+    <h2>Pick Your Catch or Play to Win!</h2>
+  </section>
+
+  <!-- Divider -->
+  <div class="divider">
+    <h1>OUR&nbsp;PRODUCTS</h1>
+  </div>
+
+  <!-- Product Section -->
+  <section class="product-list">
+    <div class="product-card">
+      <div class="inner-card">
+        <img src="assets/sushigame.png" alt="Sushi Catch Game">
+        <div class="product-info">
+          <h2>🎮 Sushi Catch Game</h2>
+          <p>
+            Experience sushi like never before — play the Sushi Catch Game!  
+            Catch sushi virtually to earn discounts or rare menu items.  
+            Skill, timing, and luck decide your prize!
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="inner-card">
+        <img src="assets/salmon.png" alt="Salmon Sushi">
+        <div class="product-info">
+          <h2>🍣 Salmon Sushi</h2>
+          <p>
+            Fresh, buttery salmon paired with soft rice — a timeless classic  
+            made every morning to perfection by our expert chefs.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="inner-card">
+        <img src="assets/tuna.png" alt="Tuna Sushi">
+        <div class="product-info">
+          <h2>🐟 Tuna Sushi</h2>
+          <p>
+            Deep red tuna that melts in your mouth.  
+            A perfect balance of flavor and texture for sushi lovers.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="inner-card">
+        <img src="assets/crabstick.png" alt="Crab Stick Sushi">
+        <div class="product-info">
+          <h2>🦀 Crab Stick Roll</h2>
+          <p>
+            Sweet, savory, and wrapped in seaweed —  
+            the Crab Stick Roll is a fan favorite among newcomers and pros alike.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="inner-card">
+        <img src="assets/mango.png" alt="Mango Sushi">
+        <div class="product-info">
+          <h2>🥭 Mango Sushi Roll</h2>
+          <p>
+            A tropical spin on sushi with fresh mango slices.  
+            Sweet, refreshing, and surprisingly addictive.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- New Order + Download Section -->
+    <div class="product-card">
+      <div class="inner-card">
+        <img src="assets/appicon.png" alt="Sushi Catch App">
+        <div class="product-info">
+          <h2>📱 Order Products Online</h2>
+          <p>
+            Order your favorite sushi directly through our official website or app!  
+            Whether you're craving fresh sushi or want to reserve ahead, Sushi Catch makes it easy.
+          </p>
+          <p class="button-row">
+            <a href="https://drive.google.com/file/d/1DeO9CJhW-ED_sB3ssdDOby-Oa7Yq7BIm/view?usp=drive_link" 
+               target="_blank" class="pixel-button download-btn">📲 Download Sushi Catch App</a>
+            <a href="#" class="pixel-button order-btn">🍣 Order Now</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
