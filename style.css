@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 
 * {
   margin: 0;
@@ -2490,3 +2490,22 @@ ul li {
     padding: 1.5rem;
   }
 } 
+
+.nav-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-buttons a {
+  text-decoration: none;
+  padding: 8px 15px;
+  background-color: #0474a0;
+  color: white;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.nav-buttons a:hover {
+  background-color: #20b6d1;
+}
