@@ -15,7 +15,6 @@ body {
   background-color: #e6f7ff; /* calm aqua */
   color: #04364A;
   scroll-behavior: smooth;
-  image-rendering: pixelated;
 }
 
 /* ==== GLOBAL OUTLINE STYLES ==== */
