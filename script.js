@@ -193,7 +193,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     function hideMusicControls() {
         const controls = document.querySelector('.music-controls');
-        controls.style.display = 'none';
     }
     
     // Music control buttons
