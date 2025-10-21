@@ -765,3 +765,215 @@ ul li {
 }
 
 
+/* About Us Section Styling */
+.about-content {
+    padding: 2rem 0;
+}
+
+.mission-vision {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #ff6b6b;
+}
+
+.card h3 {
+    color: #333;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.card li {
+    padding: 0.3rem 0;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.card li:before {
+    content: "🍣";
+    position: absolute;
+    left: 0;
+}
+
+.tagline-card {
+    border-left-color: #4ecdc4;
+}
+
+.tagline {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #4ecdc4;
+    text-align: center;
+    font-style: italic;
+}
+
+/* Game Demo Styling */
+.game-demo {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.game-demo h3 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.game-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .mission-vision {
+        grid-template-columns: 1fr;
+    }
+    
+    .game-container iframe {
+        width: 100%;
+        height: 200px;
+    }
+}
+
+/* Game Demo Styling */
+.game-demo {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 2rem 0;
+    text-align: center;
+    border: 2px dashed #ff6b6b;
+}
+
+.game-demo h3 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.game-teaser {
+    background: #fff9e6;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    border-left: 4px solid #ffd166;
+}
+
+.fun-message {
+    font-size: 1.1rem;
+    color: #e85d04;
+    font-style: italic;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.play-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #ff6b6b, #ff8e8e);
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(255, 107, 107, 0.3);
+}
+
+.play-button:hover {
+    background: linear-gradient(135deg, #e85d04, #ff6b6b);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(255, 107, 107, 0.4);
+}
+
+.game-preview {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 5px;
+}
+
+.game-preview small {
+    color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .game-demo {
+        padding: 1.5rem;
+    }
+    
+    .game-teaser {
+        padding: 1rem;
+    }
+    
+    .play-button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+
+/* Music Controls Styling */
+.music-controls {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: none; /* Hidden by default, shown if autoplay fails */
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+}
+
+.music-btn {
+    background: rgba(255, 107, 107, 0.8);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+}
+
+.music-btn:hover {
+    background: rgba(255, 107, 107, 1);
+    transform: scale(1.1);
+}
+
+/* Audio element hidden but functional */
+#backgroundMusic {
+    position: absolute;
+    left: -9999px;
+    opacity: 0;
+}
+
+/* Music controls label */
+.music-controls::before {
+    content: "Music:";
+    font-size: 0.8rem;
+    color: #666;
+    margin-right: 5px;
+    font-weight: bold;
+}

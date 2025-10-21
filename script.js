@@ -152,3 +152,87 @@ window.addEventListener("load", () => {
   const loader = document.getElementById("page-loader");
   if (loader) loader.classList.add("hidden");
 });
+
+// Background music autoplay
+document.addEventListener('DOMContentLoaded', function() {
+    const backgroundMusic = document.getElementById('backgroundMusic');
+    const musicToggle = document.getElementById('musicToggle');
+    const musicMute = document.getElementById('musicMute');
+    
+    // Set volume to a reasonable level (0.0 to 1.0)
+    backgroundMusic.volume = 0.3;
+    
+    // Try to autoplay the music
+    function playBackgroundMusic() {
+        const playPromise = backgroundMusic.play();
+        
+        if (playPromise !== undefined) {
+            playPromise.then(() => {
+                // Audio started successfully
+                console.log('Background music started');
+                hideMusicControls();
+            }).catch(error => {
+                // Auto-play was prevented - show play button instead
+                console.log('Autoplay prevented, waiting for user interaction');
+                showMusicControls();
+            });
+        }
+    }
+    
+    function showMusicControls() {
+        const controls = document.querySelector('.music-controls');
+        controls.style.display = 'block';
+        
+        // Add click event to start music
+        document.body.addEventListener('click', function startMusicOnClick() {
+            backgroundMusic.play();
+            hideMusicControls();
+            document.body.removeEventListener('click', startMusicOnClick);
+        }, { once: true });
+    }
+    
+    function hideMusicControls() {
+        const controls = document.querySelector('.music-controls');
+        controls.style.display = 'none';
+    }
+    
+    // Music control buttons
+    musicToggle.addEventListener('click', function() {
+        if (backgroundMusic.paused) {
+            backgroundMusic.play();
+            musicToggle.textContent = '🔊';
+        } else {
+            backgroundMusic.pause();
+            musicToggle.textContent = '▶️';
+        }
+    });
+    
+    musicMute.addEventListener('click', function() {
+        backgroundMusic.muted = !backgroundMusic.muted;
+        musicMute.textContent = backgroundMusic.muted ? '🔊' : '🔇';
+    });
+    
+    // Start the music
+    playBackgroundMusic();
+    
+    // Save music state in localStorage to maintain across pages
+    backgroundMusic.addEventListener('play', function() {
+        localStorage.setItem('backgroundMusicPlaying', 'true');
+    });
+    
+    backgroundMusic.addEventListener('pause', function() {
+        localStorage.setItem('backgroundMusicPlaying', 'false');
+    });
+    
+    // Check previous state when loading new page
+    if (localStorage.getItem('backgroundMusicPlaying') === 'true') {
+        backgroundMusic.play();
+    }
+    
+    // Handle page visibility changes (when switching tabs)
+    document.addEventListener('visibilitychange', function() {
+        if (!document.hidden && localStorage.getItem('backgroundMusicPlaying') === 'true') {
+            backgroundMusic.play();
+        }
+    });
+});
