@@ -7,6 +7,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const popup = document.getElementById("order-popup");
   const closePopup = document.getElementById("close-popup");
   const orderForm = document.getElementById("order-form");
+  
+  // Music controls - add these here
+  const backgroundMusic = document.getElementById('backgroundMusic');
+  const musicToggle = document.getElementById('musicToggle');
+  const musicMute = document.getElementById('musicMute');
 
   /* === NAV MENU === */
   if (menuBtn && navMenu) {
@@ -141,80 +146,76 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   setInterval(makeBubble, 400);
+
+  /* === BACKGROUND MUSIC === */
+  if (backgroundMusic && musicToggle && musicMute) {
+    backgroundMusic.volume = 0.3;
+
+    function playBackgroundMusic() {
+      const playPromise = backgroundMusic.play();
+      if (playPromise !== undefined) {
+        playPromise.then(() => {
+          console.log('Background music started');
+        }).catch(error => {
+          console.log('Autoplay prevented, waiting for user interaction');
+          showMusicControls();
+        });
+      }
+    }
+
+    function showMusicControls() {
+      const controls = document.querySelector('.music-controls');
+      if (controls) controls.style.display = 'block';
+      document.body.addEventListener('click', function startMusicOnClick() {
+        backgroundMusic.play();
+        document.body.removeEventListener('click', startMusicOnClick);
+      }, { once: true });
+    }
+
+    // Music control buttons
+    musicToggle.addEventListener('click', function() {
+      if (backgroundMusic.paused) {
+        backgroundMusic.play();
+        musicToggle.textContent = '🔊';
+      } else {
+        backgroundMusic.pause();
+        musicToggle.textContent = '▶️';
+      }
+    });
+
+    musicMute.addEventListener('click', function() {
+      backgroundMusic.muted = !backgroundMusic.muted;
+      musicMute.textContent = backgroundMusic.muted ? '🔇' : '🔊';
+    });
+
+    // Start the music
+    playBackgroundMusic();
+
+    // Save music state in localStorage to maintain across pages
+    backgroundMusic.addEventListener('play', function() {
+      localStorage.setItem('backgroundMusicPlaying', 'true');
+    });
+
+    backgroundMusic.addEventListener('pause', function() {
+      localStorage.setItem('backgroundMusicPlaying', 'false');
+    });
+
+    // Restore state if user navigated from another page
+    if (localStorage.getItem('backgroundMusicPlaying') === 'true') {
+      backgroundMusic.play();
+    }
+
+    // Resume if user switches tabs
+    document.addEventListener('visibilitychange', function() {
+      if (!document.hidden && localStorage.getItem('backgroundMusicPlaying') === 'true') {
+        backgroundMusic.play();
+      }
+    });
+  }
 });
 
 /* === ENSURE LOADER HIDDEN ON PAGE LOAD === */
 window.addEventListener("load", () => {
   const loader = document.getElementById("page-loader");
   if (loader) loader.classList.add("hidden");
-});
-
-/* === BACKGROUND MUSIC === */
-document.addEventListener('DOMContentLoaded', function() {
-  const backgroundMusic = document.getElementById('backgroundMusic');
-  const musicToggle = document.getElementById('musicToggle');
-  const musicMute = document.getElementById('musicMute');
-
-  backgroundMusic.volume = 0.3;
-
-  function playBackgroundMusic() {
-    const playPromise = backgroundMusic.play();
-    if (playPromise !== undefined) {
-      playPromise.then(() => {
-        console.log('Background music started');
-      }).catch(error => {
-        console.log('Autoplay prevented, waiting for user interaction');
-        showMusicControls();
-      });
-    }
-  }
-
-  function showMusicControls() {
-    const controls = document.querySelector('.music-controls');
-    controls.style.display = 'block';
-    document.body.addEventListener('click', function startMusicOnClick() {
-      backgroundMusic.play();
-      document.body.removeEventListener('click', startMusicOnClick);
-    }, { once: true });
-  }
-
-  // Music control buttons
-  musicToggle.addEventListener('click', function() {
-    if (backgroundMusic.paused) {
-      backgroundMusic.play();
-      musicToggle.textContent = '🔊';
-    } else {
-      backgroundMusic.pause();
-      musicToggle.textContent = '▶️';
-    }
-  });
-
-  musicMute.addEventListener('click', function() {
-    backgroundMusic.muted = !backgroundMusic.muted;
-    musicMute.textContent = backgroundMusic.muted ? '🔇' : '🔊';
-  });
-
-  // Start the music
-  playBackgroundMusic();
-
-  // Save music state in localStorage to maintain across pages
-  backgroundMusic.addEventListener('play', function() {
-    localStorage.setItem('backgroundMusicPlaying', 'true');
-  });
-
-  backgroundMusic.addEventListener('pause', function() {
-    localStorage.setItem('backgroundMusicPlaying', 'false');
-  });
-
-  // Restore state if user navigated from another page
-  if (localStorage.getItem('backgroundMusicPlaying') === 'true') {
-    backgroundMusic.play();
-  }
-
-  // Resume if user switches tabs
-  document.addEventListener('visibilitychange', function() {
-    if (!document.hidden && localStorage.getItem('backgroundMusicPlaying') === 'true') {
-      backgroundMusic.play();
-    }
-  });
 });
